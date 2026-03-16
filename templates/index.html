@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+.hero-section {
+    background-color: yellow;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-weight: 500;
+}
+
+.book-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.book-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+</style>
+
+
+<!-- HERO SECTION -->
+<section class="hero-section text-center text-white">
+    <div class="hero-overlay">
+        <h1 class="display-4">Welcome to Library Management System</h1>
+        <p class="lead mt-3">
+            Manage books, track issues, and serve students efficiently.
+        </p>
+        <a href="/dashboard" class="btn btn-primary btn-lg mt-3">
+            Explore Dashboard
+        </a>
+    </div>
+</section>
+
+
+<!-- FEATURED BOOKS -->
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4 fw-bold">Featured Books</h2>
+
+    <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow book-card">
+                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" 
+     class="card-img-top">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold">Python Programming</h5>
+                    <p class="text-muted">Learn Python from basics to advanced.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow book-card">
+               <img src="https://media.istockphoto.com/id/1498878143/photo/book-stack-and-open-book-on-the-desk-in-modern-public-library.jpg?s=612x612&w=0&k=20&c=vRcxdgfHSFJkow6DNPtaL9DT_ttdMGWel-qRLEzkQEI=" 
+     class="card-img-top">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold">Data Science Guide</h5>
+                    <p class="text-muted">Complete roadmap for Data Science.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="card shadow book-card">
+                <img src="https://www.shutterstock.com/image-photo/4-books-table-white-library-260nw-2614073777.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold">Machine Learning</h5>
+                    <p class="text-muted">Master ML algorithms and projects.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

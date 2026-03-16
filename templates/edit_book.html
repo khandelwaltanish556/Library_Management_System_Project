@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-12">
+
+            <div class="card shadow p-4">
+                <h3 class="mb-4 text-center">Edit Book</h3>
+
+                <form method="POST">
+
+                    <div class="mb-3">
+                        <label class="form-label">Book Title</label>
+                        <input type="text" name="title" value="{{ book.title }}" 
+                               class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Author</label>
+                        <input type="text" name="author" value="{{ book.author }}" 
+                               class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <input type="text" name="category" value="{{ book.category }}" 
+                               class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Quantity</label>
+                        <input type="number" name="quantity" value="{{ book.quantity }}" 
+                               class="form-control" required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-warning">
+                            Update Book
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

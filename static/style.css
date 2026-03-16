@@ -1,0 +1,166 @@
+/* Background Gradient */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    
+}
+
+/* Navbar Container */
+.navbar {
+    background-color: #1e293b;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* All Links */
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+    background-color: #334155;
+}
+
+/* Active Page Highlight */
+.navbar a.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Logout Button Special */
+.nav-right a {
+    background-color: #ef4444;
+}
+
+.nav-right a:hover {
+    background-color: #dc2626;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('../images/library-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+}
+
+/* Cards */
+.book-card {
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: #1e293b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== General Body Style ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ===== Container ===== */
+.container {
+    width: 90%;
+    margin: 40px auto;
+    background: green;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ===== Heading ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table thead {
+    background: #0f2027;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #f2f2f2;
+}
+
+/* ===== Overdue Row ===== */
+.overdue {
+    background-color: #ffe5e5 !important;
+    color: red;
+    font-weight: bold;
+}
+
+/* ===== Fine Highlight ===== */
+.fine {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.btn-return {
+    background: #ff4d4d;
+}
+
+.btn-return:hover {
+    background: #cc0000;
+}
+
+.btn-view {
+    background: #007bff;
+}
+
+.btn-view:hover {
+    background: #0056b3;
+}

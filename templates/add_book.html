@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-12">
+            
+            <div class="card shadow p-4">
+                <h4 class="mb-4 text-center">Add New Book</h4>
+
+                <form method="POST">
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Book Title</label>
+                        <input type="text" name="title" class="form-control" placeholder="Enter Book Title" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Author</label>
+                        <input type="text" name="author" class="form-control" placeholder="Enter Author Name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Quantity</label>
+                        <input type="number" name="quantity" class="form-control" placeholder="Enter Quantity" required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            Add Book
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

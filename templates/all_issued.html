@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="mb-4">All Issued Books</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>User Name</th>
+                    <th>User Id</th>
+                    <th>Book Name</th>
+                    <th>Issue Date</th>
+                    <th>Due Date</th>
+                    <th>Returned On</th>
+                    <th>Fine</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            {% for row in records %}
+            <tr class="{% if row[4] and row[5] is none and row[4] < today %}table-danger{% endif %}">
+                
+                <td>{{ row[0] }}</td>   
+                <td>{{ row[1] }}</td>   
+                <td>{{ row[2] }}</td>   
+                <td>{{ row[3] }}</td>   
+                <td>{{ row[4] }}</td>   
+                <td>{{ row[5] if row[5] else "Not Returned" }}</td> 
+                <td>₹{{ row[6] }}</td>  
+
+                <td>
+                    {% if not row[5] %}
+                        <a href="/return_book/{{ row[7] }}" class="btn btn-sm btn-success">
+                            Return
+                        </a>
+                    {% else %}
+                        <span class="badge bg-secondary">Returned</span>
+                    {% endif %}
+                </td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
